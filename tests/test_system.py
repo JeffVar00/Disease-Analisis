@@ -4,22 +4,15 @@ from src.disease_system import DiseaseDiagnosisSystem, Patient
 class TestDiseaseDiagnosis(unittest.TestCase):
     
     def setUp(self):
-        # Create a fresh instance of the expert system for each test case
         self.engine = DiseaseDiagnosisSystem()
     
     def test_patient_symptoms(self):
 
-        # Set up facts (e.g., patient data)
-        patient_fact = Patient(name="Alice", origin="City", symptoms=["Cough", "Sneezing"])
-        self.engine.reset()  # Clear previous facts
-
-        # Assert patient fact into the knowledge base
+        patient_fact = Patient(name="Jeff", origin="Palmares", symptoms=["Tos", "Estornudos"])
+        self.engine.reset()  
         self.engine.declare(patient_fact)
-
-        # Run your rules
         self.engine.run()
-        disease = "Common Cold"
-        expected_diagnosis = f"Possible disease related to {disease}"
 
-        # Assert the expected outcome
+        disease = "Gripe"
+        expected_diagnosis = f"Usted podría tener {disease}"
         self.assertEqual(self.engine.facts[-1].name, expected_diagnosis)
