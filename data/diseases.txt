@@ -1,0 +1,20 @@
+Flu
+Cough
+Fever
+
+Common Cold
+Cough
+Sneezing
+
+COVID-19
+Fever
+Cough
+Difficulty Breathing
+
+Allergies
+Sneezing
+Runny Nose
+
+Unknown Disease
+Headache
+Nausea
