@@ -1,20 +1,20 @@
-Flu
-Cough
-Fever
+Gripe
+Tos
+Fiebre
 
-Common Cold
-Cough
-Sneezing
+Refrío
+Tos
+Estornudos
 
 COVID-19
-Fever
-Cough
-Difficulty Breathing
+Fiebre
+Tos
+Dificultad para respirar
 
-Allergies
-Sneezing
-Runny Nose
+Alergía
+Estornudos
+Naríz tapada
 
-Unknown Disease
-Headache
-Nausea
+Enfermedad desconocida
+Dolor de cabeza
+Vomitos

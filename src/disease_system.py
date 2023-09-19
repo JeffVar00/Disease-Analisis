@@ -33,27 +33,27 @@ class DiseaseDiagnosisSystem(KnowledgeEngine):
 
     @Rule(Fact(action='start_diagnosis'))
     def start_dialogue(self):
-        print("Hello, I am a disease diagnosis system.")
-        patient_name = input("Please enter your name: ")
-        patient_origin = input("Where are you from?: ")
+        print("Hola!, soy tu sistema de diagnosticos de confianza :).")
+        patient_name = input("Como te llamas: ")
+        patient_origin = input("De donde eres?: ")
         self.declare(Patient(name=patient_name, origin=patient_origin))
 
     @Rule(Patient(name=MATCH.name, origin=MATCH.origin),
           Disease(diseases=MATCH.diseases))
     def ask_symptoms(self, name, origin, diseases):
-        print(f"Thank you, {name}. Now, please answer 'yes' or 'no' to the following questions:")
+        print(f"Gracias por la espera, {name}. Por favor, responde las siguientes preguntas para darte un diagnostico adecuado:")
         patient_symptoms = []
         asked_symptoms = set()
 
         if diseases is {}:
-            print("No diseases loaded. Please check your data file.")
+            print("No hay enfermedades precargadas.")
             return
 
         for _, disease_symptoms in diseases.items():
                 for symptom in disease_symptoms:
                     if symptom not in asked_symptoms:
-                        response = input(f"Do you have this symptom: {symptom}? (Y/N): ").lower()
-                        if response == "y":
+                        response = input(f"Siente o tiene: {symptom}? (S/N): ").lower()
+                        if response == "s":
                             patient_symptoms.append(symptom)
                         asked_symptoms.add(symptom)
         
@@ -73,6 +73,6 @@ class DiseaseDiagnosisSystem(KnowledgeEngine):
         # diagnosis
         if matched_diseases:
             for disease in matched_diseases:
-                print(f"Possible disease related to {disease}")
+                print(f"Usted podría tener {disease}")
         else:
-            print("No specific disease found")
+            print("No logre identificar una enfermedad posible para tu caso, te recomiendo ir a un medico especialista.")
