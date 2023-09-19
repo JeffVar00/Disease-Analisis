@@ -1,18 +1,27 @@
 import unittest
-from src.disease_system import DiseaseDiagnosisSystem, Patient
+from unittest.mock import patch
+import io
+import sys
+from src.disease_system import DiseaseDiagnosisSystem
 
-class TestDiseaseDiagnosis(unittest.TestCase):
+
+class TestDiseaseDiagnosisSystem(unittest.TestCase):
     
     def setUp(self):
         self.engine = DiseaseDiagnosisSystem()
-    
-    def test_patient_symptoms(self):
 
-        patient_fact = Patient(name="Jeff", origin="Palmares", symptoms=["Tos", "Estornudos"])
+    @patch('builtins.input', side_effect=['Jeff', 'Palmares', 's', 's', 'n', 'n', 'n', 'n', 'n'])
+    def test_ask_symptoms(self, mock_input):
+        
         self.engine.reset()  
-        self.engine.declare(patient_fact)
+        captured_output = io.StringIO()
+        sys.stdout = captured_output
         self.engine.run()
 
-        disease = "Gripe"
-        expected_diagnosis = f"Usted podría tener {disease}"
-        self.assertEqual(self.engine.facts[-1].name, expected_diagnosis)
+        sys.stdout = sys.__stdout__
+
+        captured_output_str = captured_output.getvalue()
+        self.assertIn("Usted podría tener Gripe", captured_output_str)
+
+if __name__ == '__main__':
+    unittest.main()
