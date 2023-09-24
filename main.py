@@ -1,4 +1,5 @@
-from src.disease_system import DiseaseDiagnosisSystem
+from src.disease_system import DiseaseDiagnosisSystem, Patient
+
 
 def main():
     engine = DiseaseDiagnosisSystem()

@@ -1,20 +1,31 @@
 Gripe
-Tos
 Fiebre
-
-Refrío
 Tos
+Dolor de garganta
+Congestion nasal
+Picazon en los ojos
+Fatiga
+Escalofrios
+
+Resfriado comun
+Congestion nasal
 Estornudos
+Tos
+Fatiga
+Dolor de garganta
 
 COVID-19
 Fiebre
 Tos
-Dificultad para respirar
+Dolor de garganta
+Congestion nasal
+Picazon en los ojos
+Fatiga
+Escalofrios
+Perdida del sentido del olfato y del gusto
 
-Alergía
+Alergias estacionales
 Estornudos
-Naríz tapada
-
-Enfermedad desconocida
-Dolor de cabeza
-Vomitos
+Congestion nasal
+Picazon en los ojos
+Tos
