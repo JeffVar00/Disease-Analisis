@@ -3,12 +3,12 @@ Fiebre
 Tos
 Dolor de garganta
 Congestion nasal
-Picazon en los ojos
 Fatiga
 Escalofrios
 
 Resfriado comun
 Congestion nasal
+Picazon en los ojos
 Estornudos
 Tos
 Fatiga
@@ -19,10 +19,9 @@ Fiebre
 Tos
 Dolor de garganta
 Congestion nasal
-Picazon en los ojos
 Fatiga
 Escalofrios
-Perdida del sentido del olfato y del gusto
+Perdida del sentido del gusto
 
 Alergias estacionales
 Estornudos
