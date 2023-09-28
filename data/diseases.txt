@@ -20,7 +20,6 @@ Tos
 Dolor de garganta
 Congestion nasal
 Fatiga
-Escalofrios
 Perdida del sentido del gusto
 
 Alergias estacionales
@@ -28,3 +27,10 @@ Estornudos
 Congestion nasal
 Picazon en los ojos
 Tos
+
+Bronquitis
+Tos
+Fatiga
+Fiebre
+Dolor muscular y corporal
+Dolor de garganta
