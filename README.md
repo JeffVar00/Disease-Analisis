@@ -46,4 +46,10 @@ Disease Analisis es un programa que te permite analizar los sintomas de una enfe
    python3 .\main.py
    ```
 
+2. Ejecute los pytests
+
+   ```sh
+   python3 -m unittest .\tests\test_system.py
+   ```
+
 </div>
